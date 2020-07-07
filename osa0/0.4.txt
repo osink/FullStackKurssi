@@ -1,0 +1,21 @@
+#kirjoitettu https://www.websequencediagrams.com/ varten
+
+title 0.5
+
+selain->palvelin: HTTP POST: https://fullstack-exampleapp.herokuapp.com/new_note {content}
+note over palvelin
+Palvelin lisää sisällön notesiin
+ja lähettää uudelleenohjauspyynnön
+end note
+palvelin->selain: HTTP status 302: /notes
+selain->palvelin: HTTP GET: https://fullstack-exampleapp.herokuapp.com/notes
+palvelin->selain: HTML-koodi
+selain->palvelin: HTTP GET: main.css
+palvelin->selain: main.css
+selain->palvelin: HTTP GET: main.js
+palvelin->selain: main.js
+note over selain
+selain alkaa suorittaa koodia ja pyytää data.json
+end note
+selain->palvelin: HTTP GET: data.json
+palvelin->selain: data.json

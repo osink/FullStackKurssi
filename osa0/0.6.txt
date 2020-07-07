@@ -1,0 +1,9 @@
+#kirjoitettu https://www.websequencediagrams.com/ varten
+
+title 0.6
+
+selain->palvelin: HTTP POST: https://fullstack-exampleapp.herokuapp.com/new_note_spa
+palvelin->selain: Päivitetty data.json
+note over selain
+Selain renderöi päivittyneen tiedon mukaisesti
+end note
